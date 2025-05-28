@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q+2077：代码边疆 | 赛博朋克编程共创游戏</title>
+    <meta name="description" content="加入Q+2077代码边疆，在赛博朋克世界中学习编程，与全球开发者共创未来">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-container">
+            <div class="navbar-brand">
+                <img src="assets/icons/logo.svg" alt="Q+2077 Logo" class="logo">
+                <span class="brand-text">Q+2077</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#hero" class="nav-link active">首页</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about-game" class="nav-link">关于游戏</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#how-it-works" class="nav-link">如何运作</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about-us" class="nav-link">关于我们</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 首屏Hero区域 -->
+    <section id="hero" class="hero-section">
+        <div class="hero-background">
+            <canvas id="matrix-canvas"></canvas>
+            <div class="hologram-planet"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-text-container">
+                <h1 class="hero-title">
+                    <span class="title-line">2077年，科技最后的</span>
+                    <span class="title-line highlight">自由疆域</span>
+                    <span class="title-line">不在现实，而在</span>
+                    <span class="title-line code-text">代码之中</span>
+                </h1>
+                <p class="hero-subtitle">当旧世界的科技巨头垄断了地表，一群被称为"Q+开拓者"的工程师，发现了隐藏在数据洪流中的神秘星球——Q+2077</p>
+                <div class="cta-buttons">
+                    <button class="cta-primary">加入代码边疆</button>
+                    <button class="cta-secondary">观看预告</button>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <main>
+        <!-- 关于游戏 -->
+        <section id="about-game" class="content-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">关于游戏</h2>
+                    <div class="section-line"></div>
+                </div>
+                <div class="game-content">
+                    <div class="game-story">
+                        <div class="story-text">
+                            <p class="story-intro">这里没有物理法则的束缚，只有三条铁律：</p>
+                            <div class="story-choice">
+                                <p>你的选择很简单——</p>
+                                <p>在C区学会颠覆世界的代码，</p>
+                                <p>在Q区卖给需要它的人，</p>
+                                <p>在S区成为传奇……或者泡沫。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="zones-grid">
+                        <div class="zone-card" data-zone="c">
+                            <div class="zone-icon">
+                                <div class="icon-bg"></div>
+                                <span class="zone-letter">C</span>
+                            </div>
+                            <h3>Code Academy</h3>
+                            <p>霓虹笼罩的赛博学院，AI导师用QPY传授对抗巨企的黑客技艺</p>
+                            <div class="zone-animation data-flow"></div>
+                        </div>
+                        <div class="zone-card" data-zone="q">
+                            <div class="zone-icon">
+                                <div class="icon-bg"></div>
+                                <span class="zone-letter">Q</span>
+                            </div>
+                            <h3>Quantum Inc.</h3>
+                            <p>用算法支配的暗黑市场经济，接一单代码，赚一枚加密灵魂币</p>
+                            <div class="zone-animation particle-effect"></div>
+                        </div>
+                        <div class="zone-card" data-zone="s">
+                            <div class="zone-icon">
+                                <div class="icon-bg"></div>
+                                <span class="zone-letter">S</span>
+                            </div>
+                            <h3>Synth City</h3>
+                            <p>意识上传者的狂欢之地，你的社交资本不是点赞，而是你写的AI人格</p>
+                            <div class="zone-animation matrix-bg"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 如何运作 -->
+        <section id="how-it-works" class="content-section dark-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">如何运作</h2>
+                    <div class="section-line"></div>
+                    <p class="section-subtitle">这是一个共创游戏，游戏玩家也是创作者</p>
+                </div>
+                <div class="workflow-container">
+                    <div class="workflow-timeline">
+                        <div class="timeline-item" data-step="1">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h3>世界观构建</h3>
+                                <p>由游戏核心团队QPython领导人物River设定游戏世界观框架</p>
+                                <div class="timeline-tech">核心团队设定</div>
+                            </div>
+                        </div>
+                        <div class="timeline-item" data-step="2">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h3>剧情共创</h3>
+                                <p>在公共社区讨论，AI技术分析归纳，剧情设计领导小组决定收录内容</p>
+                                <div class="timeline-tech">社区讨论 + AI归纳</div>
+                            </div>
+                        </div>
+                        <div class="timeline-item" data-step="3">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h3>开发协作</h3>
+                                <p>Fork项目进行创作，提交PR，研发领导小组决定合并方案</p>
+                                <div class="timeline-tech">Fork项目 + PR提交</div>
+                            </div>
+                        </div>
+                        <div class="timeline-item" data-step="4">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h3>测试迭代</h3>
+                                <p>用户游戏体验反馈，测试领导小组统筹迭代任务路线</p>
+                                <div class="timeline-tech">玩家反馈 + AI优化</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="current-progress">
+                        <div class="progress-card">
+                            <div class="progress-header">
+                                <span class="progress-status">当前阶段</span>
+                                <span class="progress-countdown">剩余12天</span>
+                            </div>
+                            <h4>Chapter 2 剧情征集</h4>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 65%"></div>
+                            </div>
+                            <p>65% 完成 · 已收集127个剧情方案</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 关于我们 -->
+        <section id="about-us" class="content-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">关于我们</h2>
+                    <div class="section-line"></div>
+                </div>
+                <div class="about-content">
+                    <div class="about-description">
+                        <p class="about-intro">「Q+2077：代码边疆」是一个以参与编程培训为目标的社会共创游戏，我们旨在提供一个以技术开发工程师为主角的虚拟世界，帮助更多的人有机会成为技术开发工程师。</p>
+                    </div>
+                    <div class="team-grid">
+                        <div class="team-section">
+                            <h3>技术栈</h3>
+                            <div class="tech-stack">
+                                <div class="tech-item">
+                                    <div class="tech-icon python"></div>
+                                    <span>Python</span>
+                                </div>
+                                <div class="tech-item">
+                                    <div class="tech-icon ai"></div>
+                                    <span>AI Engine</span>
+                                </div>
+                                <div class="tech-item">
+                                    <div class="tech-icon mobile"></div>
+                                    <span>Mobile Dev</span>
+                                </div>
+                                <div class="tech-item">
+                                    <div class="tech-icon web"></div>
+                                    <span>Web Dev</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="team-section">
+                            <h3>团队构成</h3>
+                            <div class="team-stats">
+                                <div class="stat-item">
+                                    <div class="stat-number">15+</div>
+                                    <div class="stat-label">核心开发者</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-number">1.2K+</div>
+                                    <div class="stat-label">社区成员</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-number">50+</div>
+                                    <div class="stat-label">贡献者</div>
+                                </div>
+                            </div>
+                            <div class="qpython-info">
+                                <h4>QPython</h4>
+                                <p>集成Python解释器、AI模型引擎和移动开发工具链，支持Web开发、科学计算和智能应用构建，提供完整的移动编程解决方案。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="assets/icons/logo.svg" alt="Q+2077 Logo" class="footer-logo">
+                    <p>构建数字时代的代码边疆</p>
+                </div>
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>游戏</h4>
+                        <a href="#about-game">关于游戏</a>
+                        <a href="#how-it-works">如何运作</a>
+                        <a href="#">开始游戏</a>
+                    </div>
+                    <div class="link-group">
+                        <h4>社区</h4>
+                        <a href="#">开发者社区</a>
+                        <a href="#">GitHub</a>
+                        <a href="#">贡献指南</a>
+                    </div>
+                    <div class="link-group">
+                        <h4>支持</h4>
+                        <a href="#">文档</a>
+                        <a href="#">FAQ</a>
+                        <a href="#">联系我们</a>
+                    </div>
+                </div>
+                <div class="social-links">
+                    <a href="#" class="social-link github"></a>
+                    <a href="#" class="social-link discord"></a>
+                    <a href="#" class="social-link twitter"></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Q+2077 QPython Team. All rights reserved.</p>
+            </div>
+        </div>
+        <button class="back-to-top" id="backToTop">
+            <span>↑</span>
+        </button>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/scroll.js"></script>
+</body>
+</html>

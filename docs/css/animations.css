@@ -1,0 +1,61 @@
+/* Animations for the Q+2077 website */
+
+/* Fade in effect */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Slide in from the left */
+.slide-in-left {
+    transform: translateX(-100%);
+    animation: slideInLeft 0.5s forwards;
+}
+
+@keyframes slideInLeft {
+    to {
+        transform: translateX(0);
+    }
+}
+
+/* Slide in from the right */
+.slide-in-right {
+    transform: translateX(100%);
+    animation: slideInRight 0.5s forwards;
+}
+
+@keyframes slideInRight {
+    to {
+        transform: translateX(0);
+    }
+}
+
+/* Hover effect for buttons */
+.button-hover {
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.button-hover:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+    transform: scale(1.05);
+}
+
+/* Pulsing effect for social media icons */
+.pulse {
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}

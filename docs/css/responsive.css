@@ -1,0 +1,67 @@
+/* Responsive styles for Q+2077: Code Frontier website */
+
+/* General styles for mobile devices */
+body {
+    font-size: 16px; /* Base font size */
+    line-height: 1.5; /* Improved readability */
+}
+
+/* Navigation bar */
+nav {
+    flex-direction: column; /* Stack items vertically on small screens */
+}
+
+nav a {
+    padding: 15px; /* Increased padding for touch targets */
+}
+
+/* Hero Section */
+.hero {
+    padding: 20px; /* Add padding for mobile */
+    text-align: center; /* Center text on mobile */
+}
+
+/* Content sections */
+.content {
+    flex-direction: column; /* Stack content vertically on small screens */
+}
+
+.about-game, .how-it-works, .about-us {
+    padding: 20px; /* Add padding for mobile */
+}
+
+/* Two-column layout for "关于游戏" section */
+@media (min-width: 768px) {
+    .about-game {
+        display: flex; /* Use flexbox for larger screens */
+        justify-content: space-between; /* Space out columns */
+    }
+}
+
+/* Time axis for "如何运作" section */
+.timeline {
+    display: flex;
+    flex-direction: column; /* Stack timeline items vertically */
+}
+
+/* Footer */
+footer {
+    text-align: center; /* Center footer content */
+    padding: 20px; /* Add padding for mobile */
+}
+
+/* Hamburger menu styles */
+.hamburger {
+    display: block; /* Show hamburger icon on mobile */
+}
+
+.hamburger.active {
+    /* Styles for active hamburger menu */
+}
+
+/* Hide elements that should not be displayed on mobile */
+@media (max-width: 767px) {
+    .desktop-only {
+        display: none; /* Hide desktop-only elements */
+    }
+}
