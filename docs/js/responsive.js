@@ -239,4 +239,46 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
+    
+    // 移动端导航链接样式优化
+    function optimizeMobileNavLinks() {
+        const navLinks = document.querySelectorAll('.nav-link');
+        
+        if (window.innerWidth <= 768) {
+            navLinks.forEach(link => {
+                // 添加移动端特定的类
+                link.classList.add('mobile-nav-link');
+                
+                // 鼠标进入事件
+                link.addEventListener('mouseenter', function() {
+                    this.style.setProperty('--underline-width', '100%');
+                });
+                
+                // 鼠标离开事件（仅对非活动链接）
+                link.addEventListener('mouseleave', function() {
+                    if (!this.classList.contains('active')) {
+                        this.style.setProperty('--underline-width', '0%');
+                    }
+                });
+            });
+        } else {
+            // 桌面端移除移动端类
+            navLinks.forEach(link => {
+                link.classList.remove('mobile-nav-link');
+                link.style.removeProperty('--underline-width');
+            });
+        }
+    }
+    
+    // 初始化
+    optimizeMobileNavLinks();
+    
+    // 窗口大小改变时重新优化
+    window.addEventListener('resize', function() {
+        optimizeMobileNavLinks();
+        
+        if (window.innerWidth > 768) {
+            closeMenu();
+        }
+    });
 });

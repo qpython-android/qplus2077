@@ -244,6 +244,7 @@ footer {
         width: 100%;
         text-align: center;
         margin: 0;
+        position: relative; /* 添加相对定位 */
     }
     
     .nav-link {
@@ -258,6 +259,26 @@ footer {
         text-transform: uppercase;
         letter-spacing: 1px;
         font-weight: 500;
+        position: relative; /* 添加相对定位用于伪元素 */
+    }
+    
+    /* 移动端导航链接的底部横线 */
+    .nav-link::after {
+        content: '';
+        position: absolute;
+        bottom: 8px; /* 距离底部的距离 */
+        left: 50%; /* 从中心开始 */
+        transform: translateX(-50%); /* 居中对齐 */
+        width: 0; /* 初始宽度为0 */
+        height: 2px;
+        background: linear-gradient(90deg, var(--neon-blue, #00f5ff), var(--neon-purple, #b224ef));
+        transition: width 0.3s ease;
+        border-radius: 1px;
+    }
+    
+    .nav-link:hover::after,
+    .nav-link.active::after {
+        width: calc(100% - 40px); /* 100%宽度减去左右padding */
     }
     
     .nav-link:hover,
@@ -266,6 +287,18 @@ footer {
         background: rgba(0, 245, 255, 0.1);
         text-shadow: 0 0 10px var(--neon-blue, #00f5ff);
         transform: translateX(10px);
+    }
+    
+    /* 如果你想要横线完全覆盖整个链接宽度，使用这个版本 */
+    .nav-link.full-width::after {
+        width: 100%;
+        left: 0;
+        transform: none;
+    }
+    
+    .nav-link.full-width:hover::after,
+    .nav-link.full-width.active::after {
+        width: 100%;
     }
     
     /* 汉堡菜单动画 */
@@ -372,6 +405,18 @@ footer {
     body.menu-open {
         overflow: auto !important;
         height: auto !important;
+    }
+    
+    .nav-link::after {
+        bottom: -2px !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        width: 0 !important;
+    }
+    
+    .nav-link:hover::after,
+    .nav-link.active::after {
+        width: 100% !important;
     }
 }
 
