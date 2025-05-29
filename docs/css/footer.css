@@ -1,0 +1,465 @@
+/* 页脚响应式样式 - 修复PC端布局 */
+.footer {
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
+    border-top: 1px solid rgba(0, 255, 159, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 30% 20%, rgba(0, 255, 159, 0.03) 0%, transparent 50%),
+        radial-gradient(circle at 70% 80%, rgba(0, 212, 255, 0.03) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+/* PC端布局优化 */
+.footer-content {
+    display: grid;
+    grid-template-columns: 300px 1fr 200px;
+    gap: 60px;
+    padding: 60px 0 40px;
+    position: relative;
+    z-index: 2;
+    align-items: start;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-brand {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.footer-logo {
+    width: 60px;
+    height: 60px;
+    filter: drop-shadow(0 0 10px rgba(0, 255, 159, 0.3));
+}
+
+.footer-brand p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 15px;
+    line-height: 1.6;
+    margin: 0;
+    max-width: 250px;
+}
+
+/* 链接区域居中对齐 */
+.footer-links {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    justify-content: center;
+    align-items: start;
+}
+
+.link-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.link-group h4 {
+    color: #00ff9f;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    font-family: 'Orbitron', monospace;
+    position: relative;
+    text-align: center;
+}
+
+.link-group h4::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 2px;
+    background: linear-gradient(90deg, #00ff9f, #00d4ff);
+}
+
+.link-group a {
+    display: block;
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    padding: 10px 0;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+
+.link-group a:hover {
+    color: #00ff9f;
+    text-shadow: 0 0 5px rgba(0, 255, 159, 0.5);
+    transform: translateY(-2px);
+}
+
+.link-group a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 1px;
+    background: #00ff9f;
+    transition: width 0.3s ease;
+}
+
+.link-group a:hover::before {
+    width: 80%;
+}
+
+/* 社交链接右对齐 */
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-end;
+    justify-content: flex-start;
+}
+
+.social-link {
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    font-size: 20px;
+}
+
+.social-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(0, 255, 159, 0.3), transparent);
+    transition: left 0.5s ease;
+}
+
+.social-link:hover::before {
+    left: 100%;
+}
+
+.social-link:hover {
+    border-color: rgba(0, 255, 159, 0.5);
+    background: rgba(0, 255, 159, 0.1);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 25px rgba(0, 255, 159, 0.3);
+}
+
+.social-link.github::after { content: '📊'; }
+.social-link.discord::after { content: '💬'; }
+.social-link.twitter::after { content: '🐦'; }
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 25px 0;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-bottom p {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 14px;
+    margin: 0;
+    letter-spacing: 0.5px;
+}
+
+/* 返回顶部按钮 */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 55px;
+    height: 55px;
+    background: linear-gradient(135deg, #00ff9f, #00d4ff);
+    border: none;
+    border-radius: 50%;
+    color: #000;
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    box-shadow: 0 5px 20px rgba(0, 255, 159, 0.3);
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.back-to-top:hover {
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0 10px 30px rgba(0, 255, 159, 0.5);
+}
+
+/* 大屏幕优化 */
+@media screen and (min-width: 1400px) {
+    .footer-content {
+        grid-template-columns: 350px 1fr 250px;
+        gap: 80px;
+        max-width: 1400px;
+    }
+    
+    .footer-links {
+        gap: 60px;
+    }
+    
+    .link-group h4 {
+        font-size: 20px;
+        margin-bottom: 30px;
+    }
+    
+    .link-group a {
+        font-size: 16px;
+        padding: 12px 0;
+    }
+    
+    .social-link {
+        width: 55px;
+        height: 55px;
+        font-size: 22px;
+    }
+}
+
+/* 平板端适配 */
+@media screen and (max-width: 1024px) {
+    .footer-content {
+        grid-template-columns: 250px 1fr 180px;
+        gap: 40px;
+        padding: 50px 20px 30px;
+    }
+    
+    .footer-links {
+        gap: 30px;
+    }
+    
+    .link-group h4 {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+    
+    .link-group a {
+        font-size: 14px;
+        padding: 8px 0;
+    }
+    
+    .social-links {
+        align-items: center;
+    }
+    
+    .social-link {
+        width: 45px;
+        height: 45px;
+        font-size: 18px;
+    }
+}
+
+/* 移动端适配 */
+@media screen and (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 40px 20px 30px;
+        text-align: center;
+    }
+    
+    .footer-brand {
+        align-items: center;
+        order: 1;
+    }
+    
+    .footer-brand p {
+        max-width: 300px;
+        text-align: center;
+        font-size: 14px;
+    }
+    
+    .footer-logo {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .footer-links {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        order: 3;
+    }
+    
+    .link-group {
+        align-items: center;
+    }
+    
+    .link-group h4 {
+        font-size: 17px;
+        margin-bottom: 20px;
+    }
+    
+    .link-group h4::after {
+        width: 35px;
+    }
+    
+    .link-group a {
+        font-size: 15px;
+        padding: 10px 0;
+    }
+    
+    .link-group a:hover {
+        transform: none;
+    }
+    
+    .link-group a:hover::before {
+        display: none;
+    }
+    
+    .social-links {
+        flex-direction: row;
+        justify-content: center;
+        order: 2;
+        gap: 25px;
+    }
+    
+    .back-to-top {
+        bottom: 20px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+}
+
+/* 超小屏幕适配 */
+@media screen and (max-width: 480px) {
+    .footer-content {
+        padding: 30px 15px 20px;
+        gap: 30px;
+    }
+    
+    .footer-logo {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .footer-brand p {
+        font-size: 13px;
+    }
+    
+    .link-group h4 {
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+    
+    .link-group a {
+        font-size: 14px;
+        padding: 8px 0;
+    }
+    
+    .social-link {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+    
+    .footer-bottom {
+        padding: 20px 0;
+    }
+    
+    .footer-bottom p {
+        font-size: 12px;
+    }
+    
+    .back-to-top {
+        bottom: 15px;
+        right: 15px;
+        width: 45px;
+        height: 45px;
+        font-size: 18px;
+    }
+}
+
+/* 横屏适配 */
+@media screen and (max-width: 896px) and (orientation: landscape) {
+    .footer-content {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        padding: 25px 20px 20px;
+    }
+    
+    .footer-brand {
+        align-items: flex-start;
+        text-align: left;
+    }
+    
+    .footer-links {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+    
+    .link-group {
+        align-items: flex-start;
+        text-align: left;
+    }
+    
+    .link-group h4 {
+        font-size: 15px;
+        margin-bottom: 15px;
+        text-align: left;
+    }
+    
+    .link-group h4::after {
+        left: 0;
+        transform: none;
+        width: 30px;
+    }
+    
+    .link-group a {
+        font-size: 13px;
+        padding: 6px 0;
+        text-align: left;
+    }
+    
+    .social-links {
+        flex-direction: row;
+        justify-content: flex-end;
+        gap: 15px;
+    }
+    
+    .social-link {
+        width: 35px;
+        height: 35px;
+        font-size: 14px;
+    }
+}

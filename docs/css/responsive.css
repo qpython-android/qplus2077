@@ -50,18 +50,249 @@ footer {
     padding: 20px; /* Add padding for mobile */
 }
 
-/* Hamburger menu styles */
+/* 导航栏响应式样式 */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(15, 15, 15, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.navbar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    z-index: 1001;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+}
+
+.brand-text {
+    font-family: 'Orbitron', monospace;
+    font-size: 24px;
+    font-weight: 700;
+    color: #00ff9f;
+    text-shadow: 0 0 10px rgba(0, 255, 159, 0.5);
+}
+
+/* 桌面端导航菜单 */
+.nav-menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 30px;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 10px 0;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #00ff9f;
+    text-shadow: 0 0 5px rgba(0, 255, 159, 0.5);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #00ff9f, #00d4ff);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+/* 汉堡菜单按钮 */
 .hamburger {
-    display: block; /* Show hamburger icon on mobile */
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 5px;
+    z-index: 1001;
 }
 
-.hamburger.active {
-    /* Styles for active hamburger menu */
+.hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background: #fff;
+    margin: 3px 0;
+    transition: all 0.3s ease;
+    border-radius: 2px;
 }
 
-/* Hide elements that should not be displayed on mobile */
-@media (max-width: 767px) {
-    .desktop-only {
-        display: none; /* Hide desktop-only elements */
+.hamburger.active .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+    background: #00ff9f;
+}
+
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+    background: #00ff9f;
+}
+
+/* 移动端样式 */
+@media screen and (max-width: 768px) {
+    .navbar-container {
+        padding: 0 15px;
+        height: 70px;
+    }
+    
+    .brand-text {
+        font-size: 20px;
+    }
+    
+    .logo {
+        width: 35px;
+        height: 35px;
+    }
+    
+    /* 显示汉堡菜单 */
+    .hamburger {
+        display: flex;
+    }
+    
+    /* 隐藏桌面端菜单 */
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 280px;
+        height: 100vh;
+        background: linear-gradient(135deg, rgba(15, 15, 15, 0.98), rgba(30, 30, 30, 0.98));
+        backdrop-filter: blur(20px);
+        border-left: 1px solid rgba(0, 255, 159, 0.2);
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 100px 30px 30px;
+        gap: 0;
+        transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: -10px 0 30px rgba(0, 0, 0, 0.5);
+    }
+    
+    .nav-menu.active {
+        right: 0;
+    }
+    
+    .nav-item {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    .nav-link {
+        display: block;
+        padding: 15px 0;
+        font-size: 18px;
+        width: 100%;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        transition: all 0.3s ease;
+    }
+    
+    .nav-link:hover {
+        padding-left: 10px;
+        border-bottom-color: rgba(0, 255, 159, 0.5);
+    }
+    
+    .nav-link::after {
+        display: none;
+    }
+    
+    /* 添加移动端菜单动画 */
+    .nav-item {
+        opacity: 0;
+        transform: translateX(20px);
+        transition: all 0.3s ease;
+    }
+    
+    .nav-menu.active .nav-item {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    
+    .nav-menu.active .nav-item:nth-child(1) { transition-delay: 0.1s; }
+    .nav-menu.active .nav-item:nth-child(2) { transition-delay: 0.2s; }
+    .nav-menu.active .nav-item:nth-child(3) { transition-delay: 0.3s; }
+    .nav-menu.active .nav-item:nth-child(4) { transition-delay: 0.4s; }
+    
+    /* 移动端菜单遮罩 */
+    .nav-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        z-index: 999;
+    }
+    
+    .nav-overlay.active {
+        opacity: 1;
+        visibility: visible;
     }
 }
+
+/* 超小屏幕优化 */
+@media screen and (max-width: 480px) {
+    .navbar-container {
+        padding: 0 10px;
+    }
+    
+    .nav-menu {
+        width: 100vw;
+        right: -100vw;
+        padding: 80px 20px 30px;
+    }
+    
+    .brand-text {
+        font-size: 18px;
+    }
+    
+    .logo {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+/* 导入关于我们的样式 */
+@import url('about-us.css');
