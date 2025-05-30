@@ -201,7 +201,10 @@ footer {
     .brand-text {
         font-size: 20px;
     }
-    
+    .zones-grid{
+        grid-template-columns:none;
+    }
+
     .logo {
         width: 35px;
         height: 35px;
