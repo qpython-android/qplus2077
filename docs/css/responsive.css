@@ -216,7 +216,7 @@ footer {
     .nav-menu {
         position: fixed;
         top: 0;
-        right: -200%;
+        right: -100%;
         width: 280px;
         height: 100vh;
         background: rgba(10, 10, 10, 0.98);
@@ -351,7 +351,7 @@ footer {
     
     .nav-menu {
         width: 100%;
-        right: -200%;
+        right: -100%;
     }
     
     .nav-link {
