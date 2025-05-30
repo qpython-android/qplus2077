@@ -361,6 +361,9 @@ footer {
     .zones-grid{
         grid-template-columns:none;
     }
+    .progress-card{
+        padding: 10px;
+    }
 }
 
 /* 确保在大屏幕上恢复正常显示 */
