@@ -358,6 +358,9 @@ footer {
         font-size: 1rem;
         padding: 12px 15px;
     }
+    .grid-template-columns{
+        grid-template-columns:none;
+    }
 }
 
 /* 确保在大屏幕上恢复正常显示 */
