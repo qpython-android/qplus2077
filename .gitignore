@@ -6,4 +6,4 @@ game/cache/*
 *.rpyc
 *.rpymc
 game/saves/*
-game/saves/*
+game/saves/persistent
