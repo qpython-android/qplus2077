@@ -27,3 +27,14 @@ Here, there are no constraints of physical laws, only three iron rules:
 Learn the code to upend the world in C Zone,
 Sell it to those who need it in Q Zone,
 Become a legend in S Zone... or just a bubble."
+
+# 资源介绍
+
+main: 游戏开发分支
+gh-pages: 官网
+...
+
+# 依赖
+游戏开发：renpy 8.7.3
+gh-pages: github-copilot
+游戏的Key: QPython App
