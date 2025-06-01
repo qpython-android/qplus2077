@@ -7,3 +7,5 @@ game/cache/*
 *.rpymc
 game/saves/*
 game/saves/persistent
+assets/*
+progressive_download.txt
