@@ -26,7 +26,7 @@
             </div>
             <ul class="nav-menu">
                 <li class="nav-item">
-                    <a href="index.html#hero" class="nav-link active">首页</a>
+                    <a href="index.html#hero" class="nav-link">首页</a>
                 </li>
                 <li class="nav-item">
                     <a href="index.html#about-game" class="nav-link">关于游戏</a>
@@ -101,7 +101,7 @@
                     <span class="section-number">02</span>
                     掌握技能
                 </h2>
-                <p class="section-desc">对参与创作此游戏怀有极大热情并掌握以下技能的，随时欢迎加入，直接联系River+即可</p>
+                <p class="section-desc">对参与创作此游戏怀有极大热情并掌握以下技能的，随时欢迎加入，直接联系River+（微信:yhc-startup 备注2077）即可</p>
                 
                 <div class="skills-grid">
                     <div class="skill-card">
@@ -229,14 +229,30 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script src="js/main.js"></script>
     <script src="js/animations.js"></script>
-    <script src="js/scroll.js"></script>
     <script src="js/responsive.js"></script>
 
     <script>
-        // 图片预览功能
+        // 处理导航链接跳转
         document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('.nav-link[data-target]');
+            
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const target = this.getAttribute('data-target');
+                    
+                    // 使用 sessionStorage 存储目标锚点
+                    if (target) {
+                        sessionStorage.setItem('scrollTarget', target);
+                    }
+                    
+                    // 跳转到首页
+                    window.location.href = 'index.html';
+                });
+            });
+
+            // 图片预览功能
             const galleryItems = document.querySelectorAll('.gallery-item');
             const modal = document.getElementById('imageModal');
             const modalImage = document.getElementById('modalImage');
