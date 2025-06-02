@@ -1,0 +1,174 @@
+/* 故事页面特定样式 */
+/* 修复导航栏遮挡问题 */
+
+.story-hero,
+.join-hero {
+    padding-top: 8rem !important; /* 增加顶部内边距避免被导航栏遮挡 */
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+}
+
+.gallery-section {
+    padding: 4rem 0;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.gallery-section:nth-child(even) {
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.gallery-item {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: linear-gradient(45deg, #1e3c72, #2a5298);
+    aspect-ratio: 1;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 255, 255, 0.3);
+}
+
+.gallery-thumb {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover .gallery-thumb {
+    transform: scale(1.1);
+}
+
+.gallery-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .gallery-overlay {
+    opacity: 1;
+}
+
+.gallery-icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: #00ffff;
+}
+
+.gallery-title {
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-align: center;
+    padding: 0 0.5rem;
+}
+
+/* 模态框样式 */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+    text-align: center;
+}
+
+.modal-image {
+    max-width: 100%;
+    max-height: 80vh;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.modal-title {
+    color: white;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    padding: 0.5rem;
+}
+
+.modal-close {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.modal-close:hover {
+    color: #00ffff;
+}
+
+/* 响应式设计 */
+@media (max-width: 1200px) {
+    .gallery-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .story-hero,
+    .join-hero {
+        padding-top: 6rem !important; /* 移动端减少顶部内边距 */
+        min-height: 50vh;
+    }
+    
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    
+    .gallery-section {
+        padding: 3rem 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .story-hero,
+    .join-hero {
+        padding-top: 5rem !important; /* 小屏幕进一步减少 */
+    }
+    
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .modal-content {
+        max-width: 95%;
+    }
+}

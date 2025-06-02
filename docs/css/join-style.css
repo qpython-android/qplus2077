@@ -76,65 +76,46 @@
 /* 技能网格 */
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
-    margin-top: 3rem;
+    margin-top: 2rem;
 }
 
 .skill-card {
-    background: linear-gradient(135deg, rgba(100, 255, 218, 0.05) 0%, rgba(0, 255, 255, 0.05) 100%);
-    border: 1px solid rgba(100, 255, 218, 0.2);
+    background: linear-gradient(135deg, rgba(30, 60, 114, 0.1), rgba(42, 82, 152, 0.1));
+    border: 1px solid rgba(0, 255, 255, 0.2);
     border-radius: 12px;
     padding: 2rem;
     text-align: center;
     transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
-}
-
-.skill-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(100, 255, 218, 0.1), transparent);
-    transition: left 0.5s ease;
-}
-
-.skill-card:hover::before {
-    left: 100%;
 }
 
 .skill-card:hover {
     transform: translateY(-5px);
-    border-color: #64ffda;
-    box-shadow: 0 15px 30px rgba(100, 255, 218, 0.2);
+    border-color: rgba(0, 255, 255, 0.5);
+    box-shadow: 0 10px 30px rgba(0, 255, 255, 0.2);
 }
 
 .skill-icon {
     font-size: 3rem;
     margin-bottom: 1rem;
-    display: block;
 }
 
 .skill-title {
-    font-size: 1.3rem;
-    font-weight: 700;
-    color: #64ffda;
-    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
 }
 
 .skill-desc {
-    color: #b0bec5;
-    font-size: 1rem;
-    line-height: 1.5;
+    color: var(--text-light);
+    line-height: 1.6;
 }
 
 /* 注意事项框 */
 .notice-box {
-    background: linear-gradient(135deg, rgba(255, 193, 7, 0.1) 0%, rgba(255, 152, 0, 0.1) 100%);
+    background: linear-gradient(135deg, rgba(255, 193, 7, 0.1), rgba(255, 152, 0, 0.1));
     border: 1px solid rgba(255, 193, 7, 0.3);
     border-radius: 8px;
     padding: 1.5rem;
@@ -143,34 +124,41 @@
 }
 
 .notice-box p {
-    color: #ffb74d;
-    margin: 0;
+    color: #ffc107;
     font-weight: 500;
+    margin: 0;
 }
 
 /* 社区内容 */
 .community-content {
-    margin-top: 3rem;
+    display: grid;
+    gap: 2rem;
+    margin-top: 2rem;
 }
 
 .community-item {
-    background: linear-gradient(135deg, rgba(100, 255, 218, 0.05) 0%, rgba(0, 255, 255, 0.05) 100%);
-    border: 1px solid rgba(100, 255, 218, 0.2);
+    background: linear-gradient(135deg, rgba(30, 60, 114, 0.1), rgba(42, 82, 152, 0.1));
+    border: 1px solid rgba(0, 255, 255, 0.2);
     border-radius: 12px;
     padding: 2rem;
-    margin-bottom: 2rem;
+    transition: all 0.3s ease;
+}
+
+.community-item:hover {
+    border-color: rgba(0, 255, 255, 0.5);
+    transform: translateY(-2px);
 }
 
 .community-title {
-    font-size: 1.4rem;
-    font-weight: 700;
-    color: #64ffda;
+    color: var(--primary-color);
+    font-size: 1.3rem;
     margin-bottom: 1rem;
+    font-weight: 600;
 }
 
 .community-desc {
-    color: #b0bec5;
-    line-height: 1.6;
+    color: var(--text-light);
+    line-height: 1.8;
     margin: 0;
 }
 
@@ -261,6 +249,26 @@
     background: #00ffff;
 }
 
+/* 为join.html页面的section添加统一的padding */
+.progress-section,
+.skills-section,
+.community-section {
+    padding: 4rem 0;
+}
+
+/* 其他现有样式保持不变 */
+.progress-section {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.skills-section {
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.community-section {
+    background: rgba(0, 0, 0, 0.1);
+}
+
 /* 响应式设计 */
 @media (max-width: 768px) {
     .join-hero .hero-title {
@@ -277,10 +285,7 @@
         gap: 1.5rem;
     }
     
-    .skill-card {
-        padding: 1.5rem;
-    }
-    
+    .skill-card,
     .community-item {
         padding: 1.5rem;
     }
@@ -338,5 +343,11 @@
         font-size: 1.3rem;
         width: 30px;
         height: 30px;
+    }
+    
+    .progress-section,
+    .skills-section,
+    .community-section {
+        padding: 2rem 0; /* 小屏幕进一步减少padding */
     }
 }

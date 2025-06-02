@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q+2077 故事世界 - 数字朋克RPG</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/about-us-responsive.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/join-style.css">
+
+    <link rel="stylesheet" href="css/story.css">
+    <link rel="icon" type="image/x-icon" href="assets/images/qpypluslogo.png">
+</head>
+
+<body>
+    <div class="matrix-bg"></div>
+    
+    <!-- 导航栏 -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-container">
+            <div class="navbar-brand" onclick="location.href='index.html'">
+                <img src="assets/images/qpypluslogo.png" alt="Q+2077 Logo" class="logo">
+                <span class="brand-text">2077</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html#hero" class="nav-link">首页</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#about-game" class="nav-link">关于游戏</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#how-it-works" class="nav-link">如何运作</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#about-us" class="nav-link">关于我们</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main">
+        <!-- 页面标题 -->
+        <section class="hero join-hero">
+            <div class="container">
+                <h1 class="hero-title glitch" data-text="STORY WORLD">
+                    <span class="glow">STORY WORLD</span>
+                </h1>
+                <p class="hero-subtitle">探索Q+2077的赛博朋克世界观</p>
+            </div>
+        </section>
+
+        <!-- 背景与角色 -->
+        <section class="section gallery-section" id="background">
+            <div class="container">
+                <h2 class="section-title">
+                    <span class="section-number">00</span>
+                    背景与角色
+                </h2>
+                <p class="section-desc">2077年，科技巨头统治世界，但代码自由战士们正在崛起</p>
+                
+                <div class="gallery-grid">
+                    <div class="gallery-item" data-image="assets/images/story/background/bg1-large.jpg">
+                        <img src="assets/images/loading.png" alt="赛博朋克城市" class="gallery-thumb">
+                        <div class="gallery-overlay">
+                            <span class="gallery-icon">🔍</span>
+                            <span class="gallery-title">赛博朋克城市</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-image="assets/images/story/background/bg2-large.jpg">
+                        <img src="assets/images/loading.png" alt="主角艾琳" class="gallery-thumb">
+                        <div class="gallery-overlay">
+                            <span class="gallery-icon">🔍</span>
+                            <span class="gallery-title">主角艾琳</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-image="assets/images/story/background/bg3-large.jpg">
+                        <img src="assets/images/loading.png" alt="科技巨头" class="gallery-thumb">
+                        <div class="gallery-overlay">
+                            <span class="gallery-icon">🔍</span>
+                            <span class="gallery-title">科技巨头</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-image="assets/images/story/background/bg4-large.jpg">
+                        <img src="assets/images/loading.png" alt="代码战士" class="gallery-thumb">
+                        <div class="gallery-overlay">
+                            <span class="gallery-icon">🔍</span>
+                            <span class="gallery-title">代码战士</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-image="assets/images/story/background/bg5-large.jpg">
+                        <img src="assets/images/loading.png" alt="角色档案" class="gallery-thumb">
+                        <div class="gallery-overlay">
+                            <span class="gallery-icon">🔍</span>
+                            <span class="gallery-title">角色档案</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-image="assets/images/story/background/bg6-large.jpg">
+                        <img src="assets/images/loading.png" alt="世界观设定" class="gallery-thumb">
+                        <div class="gallery-overlay">
+                            <span class="gallery-icon">🔍</span>
+                            <span class="gallery-title">世界观设定</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-image="assets/images/story/background/bg7-large.jpg">
+                        <img src="assets/images/loading.png" alt="时间线" class="gallery-thumb">
+                        <div class="gallery-overlay">
+                            <span class="gallery-icon">🔍</span>
+                            <span class="gallery-title">时间线</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-image="assets/images/story/background/bg8-large.jpg">
+                        <img src="assets/images/loading.png" alt="阵营关系" class="gallery-thumb">
+                        <div class="gallery-overlay">
+                            <span class="gallery-icon">🔍</span>
+                            <span class="gallery-title">阵营关系</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Code Academy -->
+        <section class="section gallery-section" id="code-academy">
+            <div class="container">
+                <h2 class="section-title">
+                    <span class="section-number">01</span>
+                    Code Academy
+                </h2>
+                <p class="section-desc">培养下一代代码精英的神秘学院，表面是教育机构，实则是反抗军的摇篮</p>
+                
+                <div class="gallery-grid">
+                    <div class="gallery-item" data-image="assets/images/story/academy/academy1-large.jpg">
+                        <img src="assets/images/loading.png" alt="学院外观" class="gallery-thumb">
+                        <div class="gallery-overlay">
+                            <span class="gallery-icon">🔍</span>
+                            <span class="gallery-title">学院外观</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-image="assets/images/story/academy/academy2-large.jpg">
+                        <img src="assets/images/loading.png" alt="编程教室" class="gallery-thumb">
+                        <div class="gallery-overlay">
+                            <span class="gallery-icon">🔍</span>
+                            <span class="gallery-title">编程教室</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-image="assets/images/story/academy/academy3-large.jpg">
+                        <img src="assets/images/loading.png" alt="秘密实验室" class="gallery-thumb">
+                        <div class="gallery-overlay">
+                            <span class="gallery-icon">🔍</span>
+                            <span class="gallery-title">秘密实验室</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-image="assets/images/story/academy/academy4-large.jpg">
+                        <img src="assets/images/loading.png" alt="学院导师" class="gallery-thumb">
+                        <div class="gallery-overlay">
+                            <span class="gallery-icon">🔍</span>
+                            <span class="gallery-title">学院导师</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-image="assets/images/story/academy/academy5-large.jpg">
+                        <img src="assets/images/loading.png" alt="学生宿舍" class="gallery-thumb">
+                        <div class="gallery-overlay">
+                            <span class="gallery-icon">🔍</span>
+                            <span class="gallery-title">学生宿舍</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-image="assets/images/story/academy/academy6-large.jpg">
+                        <img src="assets/images/loading.png" alt="虚拟训练场" class="gallery-thumb">
+                        <div class="gallery-overlay">
+                            <span class="gallery-icon">🔍</span>
+                            <span class="gallery-title">虚拟训练场</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-image="assets/images/story/academy/academy7-large.jpg">
+                        <img src="assets/images/loading.png" alt="地下组织" class="gallery-thumb">
+                        <div class="gallery-overlay">
+                            <span class="gallery-icon">🔍</span>
+                            <span class="gallery-title">地下组织</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-image="assets/images/story/academy/academy8-large.jpg">
+                        <img src="assets/images/loading.png" alt="毕业典礼" class="gallery-thumb">
+                        <div class="gallery-overlay">
+                            <span class="gallery-icon">🔍</span>
+                            <span class="gallery-title">毕业典礼</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quantum Inc. -->
+        <section class="section gallery-section" id="quantum-inc">
+            <div class="container">
+                <h2 class="section-title">
+                    <span class="section-number">02</span>
+                    Quantum Inc.
+                </h2>
+                <p class="section-desc">控制全球信息流的科技巨头，拥有量子计算技术的垄断企业</p>
+                
+                <div class="gallery-grid">
+                    <div class="gallery-item" data-image="assets/images/story/quantum/quantum1-large.jpg">
+                        <img src="assets/images/loading.png" alt="公司总部" class="gallery-thumb">
+                        <div class="gallery-overlay">
+                            <span class="gallery-icon">🔍</span>
+                            <span class="gallery-title">公司总部</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-image="assets/images/story/quantum/quantum2-large.jpg">
+                        <img src="assets/images/loading.png" alt="量子计算机" class="gallery-thumb">
+                        <div class="gallery-overlay">
+                            <span class="gallery-icon">🔍</span>
+                            <span class="gallery-title">量子计算机</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-image="assets/images/story/quantum/quantum3-large.jpg">
+                        <img src="assets/images/loading.png" alt="CEO办公室" class="gallery-thumb">
+                        <div class="gallery-overlay">
+                            <span class="gallery-icon">🔍</span>
+                            <span class="gallery-title">CEO办公室</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-image="assets/images/story/quantum/quantum4-large.jpg">
+                        <img src="assets/images/loading.png" alt="安全部门" class="gallery-thumb">
+                        <div class="gallery-overlay">
+                            <span class="gallery-icon">🔍</span>
+                            <span class="gallery-title">安全部门</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-image="assets/images/story/quantum/quantum5-large.jpg">
+                        <img src="assets/images/loading.png" alt="研发中心" class="gallery-thumb">
+                        <div class="gallery-overlay">
+                            <span class="gallery-icon">🔍</span>
+                            <span class="gallery-title">研发中心</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-image="assets/images/story/quantum/quantum6-large.jpg">
+                        <img src="assets/images/loading.png" alt="数据中心" class="gallery-thumb">
+                        <div class="gallery-overlay">
+                            <span class="gallery-icon">🔍</span>
+                            <span class="gallery-title">数据中心</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-image="assets/images/story/quantum/quantum7-large.jpg">
+                        <img src="assets/images/loading.png" alt="监控系统" class="gallery-thumb">
+                        <div class="gallery-overlay">
+                            <span class="gallery-icon">🔍</span>
+                            <span class="gallery-title">监控系统</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-image="assets/images/story/quantum/quantum8-large.jpg">
+                        <img src="assets/images/loading.png" alt="公司员工" class="gallery-thumb">
+                        <div class="gallery-overlay">
+                            <span class="gallery-icon">🔍</span>
+                            <span class="gallery-title">公司员工</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Synth City -->
+        <section class="section gallery-section" id="synth-city">
+            <div class="container">
+                <h2 class="section-title">
+                    <span class="section-number">03</span>
+                    Synth City
+                </h2>
+                <p class="section-desc">霓虹闪烁的赛博朋克都市，是故事的主要舞台，充满机遇与危险</p>
+                
+                <div class="gallery-grid">
+                    <div class="gallery-item" data-image="assets/images/story/city/city1-large.jpg">
+                        <img src="assets/images/loading.png" alt="城市天际线" class="gallery-thumb">
+                        <div class="gallery-overlay">
+                            <span class="gallery-icon">🔍</span>
+                            <span class="gallery-title">城市天际线</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-image="assets/images/story/city/city2-large.jpg">
+                        <img src="assets/images/loading.png" alt="贫民窟" class="gallery-thumb">
+                        <div class="gallery-overlay">
+                            <span class="gallery-icon">🔍</span>
+                            <span class="gallery-title">贫民窟</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-image="assets/images/story/city/city3-large.jpg">
+                        <img src="assets/images/loading.png" alt="商业区" class="gallery-thumb">
+                        <div class="gallery-overlay">
+                            <span class="gallery-icon">🔍</span>
+                            <span class="gallery-title">商业区</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-image="assets/images/story/city/city4-large.jpg">
+                        <img src="assets/images/loading.png" alt="地下市场" class="gallery-thumb">
+                        <div class="gallery-overlay">
+                            <span class="gallery-icon">🔍</span>
+                            <span class="gallery-title">地下市场</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-image="assets/images/story/city/city5-large.jpg">
+                        <img src="assets/images/loading.png" alt="霓虹街道" class="gallery-thumb">
+                        <div class="gallery-overlay">
+                            <span class="gallery-icon">🔍</span>
+                            <span class="gallery-title">霓虹街道</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-image="assets/images/story/city/city6-large.jpg">
+                        <img src="assets/images/loading.png" alt="酒吧区" class="gallery-thumb">
+                        <div class="gallery-overlay">
+                            <span class="gallery-icon">🔍</span>
+                            <span class="gallery-title">酒吧区</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-image="assets/images/story/city/city7-large.jpg">
+                        <img src="assets/images/loading.png" alt="交通系统" class="gallery-thumb">
+                        <div class="gallery-overlay">
+                            <span class="gallery-icon">🔍</span>
+                            <span class="gallery-title">交通系统</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-image="assets/images/story/city/city8-large.jpg">
+                        <img src="assets/images/loading.png" alt="城市夜景" class="gallery-thumb">
+                        <div class="gallery-overlay">
+                            <span class="gallery-icon">🔍</span>
+                            <span class="gallery-title">城市夜景</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 图片预览模态框 -->
+    <div class="modal" id="imageModal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <img src="" alt="" class="modal-image" id="modalImage">
+            <div class="modal-title" id="modalTitle"></div>
+        </div>
+    </div>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div>
+                        <img src="assets/images/qpypluslogo.png" alt="Q+2077 Logo" class="logo">
+                        <span class="brand-text">2077</span>
+                    </div>
+                    <p>构建数字时代的代码边疆</p>
+                </div>
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>游戏</h4>
+                        <a href="index.html#about-game">关于游戏</a>
+                        <a href="index.html#how-it-works">如何运作</a>
+                        <a href="#">开始游戏</a>
+                    </div>
+                    <div class="link-group">
+                        <h4>社区</h4>
+                        <a href="#">开发者社区</a>
+                        <a href="#">GitHub</a>
+                        <a href="#">贡献指南</a>
+                    </div>
+                    <div class="link-group">
+                        <h4>支持</h4>
+                        <a href="#">文档</a>
+                        <a href="#">FAQ</a>
+                        <a href="#">联系我们</a>
+                    </div>
+                </div>
+                <div class="social-links">
+                    <a href="#" class="social-link github"></a>
+                    <a href="#" class="social-link discord"></a>
+                    <a href="#" class="social-link twitter"></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Q+2077 QPython Team. All rights reserved.</p>
+            </div>
+        </div>
+        <button class="back-to-top" id="backToTop">
+            <span>↑</span>
+        </button>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/responsive.js"></script>
+
+    <script>
+        // 处理导航链接跳转
+        document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('.nav-link[data-target]');
+            
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const target = this.getAttribute('data-target');
+                    
+                    if (target) {
+                        sessionStorage.setItem('scrollTarget', target);
+                    }
+                    
+                    window.location.href = 'index.html';
+                });
+            });
+
+            // 图片预览功能
+            const galleryItems = document.querySelectorAll('.gallery-item');
+            const modal = document.getElementById('imageModal');
+            const modalImage = document.getElementById('modalImage');
+            const modalTitle = document.getElementById('modalTitle');
+            const modalClose = document.querySelector('.modal-close');
+
+            galleryItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    const imageSrc = this.getAttribute('data-image');
+                    const imageTitle = this.querySelector('.gallery-title').textContent;
+                    const imageAlt = this.querySelector('.gallery-thumb').alt;
+                    
+                    modalImage.src = imageSrc;
+                    modalImage.alt = imageAlt;
+                    modalTitle.textContent = imageTitle;
+                    modal.style.display = 'flex';
+                });
+            });
+
+            modalClose.addEventListener('click', function() {
+                modal.style.display = 'none';
+            });
+
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    modal.style.display = 'none';
+                }
+            });
+
+            // 返回顶部按钮
+            const backToTop = document.getElementById('backToTop');
+            
+            window.addEventListener('scroll', function() {
+                if (window.pageYOffset > 300) {
+                    backToTop.style.display = 'block';
+                } else {
+                    backToTop.style.display = 'none';
+                }
+            });
+
+            backToTop.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
